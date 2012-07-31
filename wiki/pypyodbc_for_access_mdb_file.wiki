@@ -1,4 +1,4 @@
-#labels Phase-Implementation
+#labels Phase-Implementation,Featured
 #Create and Compact Access MDB files with python on win32 platform
 
 = PyPyODBC functions for accessing MDB file =
