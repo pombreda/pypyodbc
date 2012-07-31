@@ -15,7 +15,8 @@ pypyodbc.win_create_mdb( "D:\\Your MDB file path.mdb" )
 }}}
   * To compact an existing Access mdb file
 {{{
-pypyodbc.win_compact_mdb("D:\\The path to the mdb file to be compacted","D:\\The path of the new compacted mdb file")
+pypyodbc.win_compact_mdb("D:\\The path to the mdb file to be compacted"
+                       ,"D:\\The path of the new compacted mdb file")
 }}}
   * Then you can continue to use pypyodbc to connect to those mdb files and manipulate them with ODBC interface
 {{{
