@@ -26,6 +26,7 @@ cur.execdirect(u"""create table pypyodbc_test_tabl (ID integer PRIMARY KEY,produ
 
 ...
 cur.close()
+conn.commit()
 conn.close()
    
 
