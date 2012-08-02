@@ -13,11 +13,7 @@ Import pypyodbc in you scrpt and:
 {{{
 pypyodbc.win_create_mdb( "D:\\Your MDB file path.mdb" )
 }}}
-  * To compact an existing Access mdb file
-{{{
-pypyodbc.win_compact_mdb("D:\\The path to the to be compacted mdb file"
-                       ,"D:\\The path of the compacted new mdb file")
-}}}
+
   * Then you can continue to use pypyodbc to connect to those mdb files and manipulate them with ODBC interface
 {{{
 conn = pypyodbc.connect(u'''Driver={Microsoft Access Driver (*.mdb)};DBQ='''+mdb_path
@@ -33,4 +29,11 @@ cur.close()
 conn.close()
    
 
+}}}
+
+
+  * Finally, To compact an existing Access mdb file
+{{{
+pypyodbc.win_compact_mdb("D:\\The path to the to be compacted mdb file"
+                       ,"D:\\The path of the compacted new mdb file")
 }}}
