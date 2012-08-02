@@ -35,6 +35,6 @@ conn.close()
 
   * Finally, To compact an existing Access mdb file
 {{{
-pypyodbc.win_compact_mdb("D:\\The path to the to be compacted mdb file"
-                       ,"D:\\The path of the compacted new mdb file")
+pypyodbc.win_compact_mdb("D:\\The path to the original to be compacted mdb file"
+                       ,"D:\\The path to put the compacted new mdb file")
 }}}
