@@ -1,0 +1,114 @@
+Python Datenbankprogrammierung Quick Start Tutorial
+
+In diesem Jahr, auch print "Hello World"-Tutorial? Vorsitzender Mao sagte, ist dies nicht Mobbing it! An diesem Tag und Alter, ist die Datenbank König! Heute verwende ich eine einfache Datenbank sales Entwicklung bei den Lesern in Entry-Python-Datenbank-Programmierung Techniken interessiert zu führen. Wir verwenden Python eine einfache Access-Umsatz-Datenbank zu erstellen, mit ODBC-Datenbank einfügen löschen Verkaufsrekorde, die letzte der Daten in der Datenbank-Abfrage. Im Folgenden werden wir eine Schritt-für-Schritt durch die Programmierung Schritte sein:
+1) Einführung und Python ODBC-Modul pypyodbc installieren;
+2) Erstellen Sie eine Access-Datenbank und verkaufte in dieser Datenbank-Tabelle;
+3) zum Umsatz Datensätze in der Tabelle, Einfügen von Datensätzen, Aufzeichnungen von Verkaufsgeschäften;
+4) unter Verwendung von Python zur Abfrage von Daten in der Datenbank und compress Access-Datenbank-Datei.
+Lassen Sie diese beginnen!
+
+1) Installieren Sie Python und pypyodbc des Moduls
+Die Python in www.python.org download. Für dieses Tutorial heruntergeladen wir Version ist Python 2.7.3, obwohl es ein Programmier-Plattform ist, und gewöhnliches Programm, wählen Sie eine lokale Installation Pfad installieren, können Sie die "Next" den ganzen Weg um die Installation abzuschließen drücken.
+- Es gibt eine Menge Leute werden fragen, warum nicht wählen Sie die neuesten Python 3.x? Heute (20. Januar 2013) des Autors persönlichen Sicht ist: Wenn Sie schnell begann mit Python ein praktisches System entwickeln wollen, dann sollten Sie Python 2.7. Python 3.x zukünftige Richtung, nicht die 3.x-Version keine guten Abwärtskompatibilität Funktion, die in Python 2.x-Modul in Python 3.x verwendet werden kann immer noch nicht eingesetzt werden, zum Beispiel die Fälle wird, um eine Verbindung verwendet werden, und Betreiben ODBC pypyodbc Modul. Python 3.x Brot und Milch in der Vorbereitung, aber es wird einige Zeit dauern.
+
+Als nächstes müssen wir pypyodbc Modul zu installieren. pypyodbc ein einziges Skript, um das Betriebssystem ODBC Funktionsbausteins in reinem Python (Python mächtig ist evident) geschrieben nennen, sehr zu empfehlen, sehr mächtig (Na ja, pypyodbc I erstellt). Way Installation pypyodbc:
+Von http://code.google.com/p/pypyodbc/downloads/list Download pypyodbc file neueste ist pypyodbc-0.9.1-SVN-r206.zip downloaden und entpacken Sie es in ein temporäres Verzeichnis, doppelklicken Sie auf das Verzeichnis der setup.py Dateien können Sie dieses Modul installieren.
+In diesem Tutorial werden wir unter dem Kommando direkt in die interaktive Python-Fenster sein, so nutzen Sie bitte das obige Verfahren zur pypyodbc installieren. Projekt in der Zukunft, können wir auch ein ZIP-Paket pypyodbc.py entpackt, in das gleiche Verzeichnis haben wir das Skript zu schreiben platziert sein, können Sie auch telefonisch direkt in das Skript, und müssen nicht separat installiert werden.
+Ready, können wir beginnen, um Code in Python zu schreiben!
+
+2) Erstellen Sie eine Access-Datenbank und Verkauf von Datensätzen in der Datenbank-Tabelle
+Von hier aus werden wir beginnen, um wirklich zu einem herrlichen Python-Code landwirtschaftlichen verwandeln, und ich, wie der Code landwirtschaftlichen Coach vergiessen Sie den Beginn der ersten Zeilen Python-Code, werde ich ausführlich über ihre Rolle zu sprechen. Wir werden in der Python-Schnittstelle Schritt für Schritt, um den Code in Aktion abzuschließen, um die Wirkung der einzelnen Schritte zu verstehen, und schließlich werden wir diese interaktiven Code in einer Skriptdatei zu konzentrieren, und wirklich ein Programm geworden.
+Öffnen wir die Python-Schnittstelle: Finden Sie Python 2.7-Verzeichnis aus dem Windows-Startmenü auf Ausführen Python 2.7 die folgende Python (Command Line), wird es eine weiß auf schwarz Texteingabe-Fenster Pop-up sein, mit den folgenden Worten klicken.
+Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+
+Dies zeigt, dass Sie Eingabe dieses >>> Symbol nach dem Befehl von Python-Code, komplette Schritt-für-Schritt-Aktionen, um Python zu manipulieren. Wir gehen Schritt für Schritt:
+Der erste Schritt: Wir Befehl Python aus vielen Modulbibliothek zu identifizieren gerade installiert es pypyodbc Modul für den Einsatz im nächsten Schritt.
+>>> import pypyodbc
+
+Schritt zwei: Wir wollen eine Access-Datenbank zum Umsatz Datenspeicher erstellen. Dies ist ein Merkmal der PyPyODBC lassen sich leichter erstellen eine leere Access-Datenbank auf Windows-Plattformen. Access-Datenbank mit dem Namen salesdb.mdb, haben wir ihn in D unter dem Root-Verzeichnis.
+>>> pypyodbc.win_create_mdb('D:\\salesdb.mdb')
+Zu diesem Zeitpunkt können Sie sehen salesdb.mdb Blank Access-Datenbank-Datei in dem Laufwerk D erzeugt wird.
+
+Der dritte Schritt: Verwendung von Access ODBC-Verbindungszeichenfolge durch pypyodbc Modul A nach salesdb.mdb Datenbank-ODBC-Connection-Objekt conn verbunden:
+>>>conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ=D:\\salesdb.mdb')
+Und aus dieser Verbindung Objektoperation Cursor Aktuell Zugang zu einer Datenbank:
+>>>cur = conn.cursor()
+
+Der vierte Schritt, um einen neuen Umsatzrekord in der Datenbank-Tabelle saleout erstellen
+Wir führen Befehle mit dem Cursor auf einen SQL-Befehl an die Access-Datenbank übergeben, erstellen Sie eine Tabelle mit dem Namen saleout:
+>>>cur.execute('''CREATE TABLE saleout (
+ID COUNTER PRIMARY KEY,
+customer_name VARCHAR(25), 
+product_name VARCHAR(30), 
+price float, 
+volume int,
+sell_time datetime);''')
+
+ID (ID) der customer_name der Name des Kunden product_name (Handelsname), Preis (Verkaufspreis), Volumen (Menge) und sell_time (Verkauf Zeit) Tabelle: Diese Datenbank ist mit einem Tisch Feld erstellt.
+Schließlich gaben wir den Betrieb von der Vorderseite eines one-time, so dass sie offiziell wirksam in der Datenbank.
+>>>cur.commit()
+
+3) zum Umsatz Datensätze in der Tabelle, Einfügen von Datensätzen, Aufzeichnungen von Verkaufstransaktionen
+Nachdem die Datenbank erstellt wurde, können wir füllen Rekordumsatz.
+
+Der erste Schritt, verzeichneten wir einen Kunden von Herrn Chiang (Jiang Wen), am 21. Januar 2013, 5000,5 Yuan zu kaufen die beiden das Huawei Ascend Mate Telefon:
+>>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(?,?,?,?,?)''',(u'江文','Huawei Ascend mate','5000.5',2,'2012-1-21'))
+Vergessen Sie nicht, unverzüglich den Betrag erfasst offiziell wirksam in der Datenbank:
+>>>cur.commit()
+
+
+Weiter haben wir dann Chargenprotokoll Anzahl der Verkäufe:
+>>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(?,?,?,?,?)''',(u'杨天真','Apple IPhone 5','6000.1',1,'2012-1-21'))
+>>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(?,?,?,?,?)''',(u'郑现实','Huawei Ascend D2','5100.5',1,'2012-1-22'))
+>>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(?,?,?,?,?)''',(u'莫小闵','Huawei Ascend D2','5200.5',1,'2012-1-22'))
+>>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(?,?,?,?,?)''',(u'顾小白','Huawei Ascend mate','5000.5',1,'2012-1-22'))
+Unmittelbar offiziell unterbreiten Inkrafttreten in der Datenbank zur gleichen Zeit, diese vier Einträge:
+>>>cur.commit()
+
+An diesem Punkt haben wir 5 Verkäufe im System erfasst. In den folgenden Schritten werden wir abfragen diese Aufzeichnungen.
+
+
+4) unter Verwendung von Python zur Abfrage von Daten in der Datenbank und Komprimierung Access-Datenbank-Datei
+Wenn wir auf 21. Januar 2012 abfragen wollen, tun unser Umsatz von Huawei-Produkte? Zu diesem Zeitpunkt werden wir eine SQL-Abfrage an die Access-Datenbank übergeben, und der Zugang zu einer Datenbank-Abfrage erhaltenen Ergebnisse als Python-Variablen zurückgegeben werden.
+First-Pass-SQL-Abfrage zur Datenbank Zugang:
+>>>cur.execute('''SELECT * FROM saleout WHERE product_name LIKE '%Huawei%'''')
+
+Dann kriechen die Feldnamen des Ergebnisses aus der Datenbank Abfrage-Ergebnisse fest:
+>>>for d in cur.description:
+    print d[0],
+id customer_name product_name price volume sell_time
+
+Die interaktive Schnittstelle zeigt den Namen der einzelnen Felder. Wir nächsten Zeile für Zeile der Ergebnismenge wird auf dem Bildschirm angezeigt:
+>>>for row in cur.fetchall():
+    for field in row: 
+        print field,
+    print ''
+1 江文 Huawei Ascend mate 5000.5 2 2012-01-21 00:00:00
+3 郑现实 Huawei Ascend D2 5100.5 1 2012-01-22 00:00:00
+4 莫小闵 Huawei Ascend D2 5000.5 1 2012-01-22 00:00:00
+5 顾小白 Huawei Ascend mate 5000.5 1 2012-01-22 00:00:00
+Dies zeigt, dass alle der Ergebnisgruppe.
+
+Für Access-Datenbanken, nach langen Einfügen von Daten, kann der Access-Datenbank-Datei zu sehr aufgebläht und riesig. PyPyODBC bietet weitere Funktionen können direkt die Bereinigung komprimierte Datenbank mit Code in Python-Programmen. Wir haben jetzt D: \ salesdb.mdb Kompression erzeugt eine Datei salesdb_backup.mdb:
+Zuerst schließen Sie die Datenbank-Verbindung:
+>>>conn.close()
+
+
+Die dann pypyodbc win_compact_mdb sauber komprimierte Datenbankdatei:
+>>>pypyodbc.win_compact_mdb('D:\\salesdb.mdb','D:\\salesdb_backup.mdb')
+
+Zu dieser Zeit finden Sie eine clean-up der komprimierten Datei salesdb_backup.mdb erzeugen das Laufwerk D, gibt es keinen großen Unterschied in diesem Fall die Größe der Datenbank, aber die Datenbank nach langen und häufigen Gebrauch der Kompression Wirkung der Bereinigung wird sehr alarmierend.
+
+Pflegen Sie ein Python-Programm und Gesamt-Datei
+Vorherige Tutorial verwenden wir die interaktive Python-Schnittstelle, eine einzige Zeile Code Zeile Code zu Python Abschluss aller Schritte zu manipulieren. Wir können diesen Code im Hinterkopf legen, so dass Python in Übereinstimmung mit der Reihenfolge des Codes in der Textdatei in eine Textdatei namens py durchgeführt. Der Code in diesem Tutorial Programm kann zum Download zur Verfügung auf der sales_sample.py.
+
+Einige Leser können Fragen zu diesem Tutorial stellen heißt, die Access-Datenbank, andere Datenbanken, wie es zu bedienen betreiben? In der Tat, so lange wie Sie die Datenbank-Unterstützung ODBC (der Autor hat nicht einer relationalen Datenbank, die ODBC unterstützt gehört) verwenden, kann es pypyodbc Datenbank verwendet werden. pypyodbc derzeit bekannten unterstützten Datenbanken sein: Access, SQL Server, MySQL, PostgreSQL und sogar Excel.
+
+Oder das alte chinesische Sprichwort, Master usher der Praxis auf seine eigenen. Ich hoffe, dieser Artikel für Leser lernen, die Tür zu benutzen, um einen Python zu öffnen.
