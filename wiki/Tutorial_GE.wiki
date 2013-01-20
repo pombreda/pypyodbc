@@ -19,25 +19,33 @@ Ready, können wir beginnen, um Code in Python zu schreiben!
 2) Erstellen Sie eine Access-Datenbank und Verkauf von Datensätzen in der Datenbank-Tabelle
 Von hier aus werden wir beginnen, um wirklich zu einem herrlichen Python-Code landwirtschaftlichen verwandeln, und ich, wie der Code landwirtschaftlichen Coach vergiessen Sie den Beginn der ersten Zeilen Python-Code, werde ich ausführlich über ihre Rolle zu sprechen. Wir werden in der Python-Schnittstelle Schritt für Schritt, um den Code in Aktion abzuschließen, um die Wirkung der einzelnen Schritte zu verstehen, und schließlich werden wir diese interaktiven Code in einer Skriptdatei zu konzentrieren, und wirklich ein Programm geworden.
 Öffnen wir die Python-Schnittstelle: Finden Sie Python 2.7-Verzeichnis aus dem Windows-Startmenü auf Ausführen Python 2.7 die folgende Python (Command Line), wird es eine weiß auf schwarz Texteingabe-Fenster Pop-up sein, mit den folgenden Worten klicken.
+{{{
 Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win32
 Type "copyright", "credits" or "license()" for more information.
 >>> 
-
+}}}
 Dies zeigt, dass Sie Eingabe dieses >>> Symbol nach dem Befehl von Python-Code, komplette Schritt-für-Schritt-Aktionen, um Python zu manipulieren. Wir gehen Schritt für Schritt:
 Der erste Schritt: Wir Befehl Python aus vielen Modulbibliothek zu identifizieren gerade installiert es pypyodbc Modul für den Einsatz im nächsten Schritt.
+{{{
 >>> import pypyodbc
-
+}}}
 Schritt zwei: Wir wollen eine Access-Datenbank zum Umsatz Datenspeicher erstellen. Dies ist ein Merkmal der PyPyODBC lassen sich leichter erstellen eine leere Access-Datenbank auf Windows-Plattformen. Access-Datenbank mit dem Namen salesdb.mdb, haben wir ihn in D unter dem Root-Verzeichnis.
+{{{
 >>> pypyodbc.win_create_mdb('D:\\salesdb.mdb')
+}}}
 Zu diesem Zeitpunkt können Sie sehen salesdb.mdb Blank Access-Datenbank-Datei in dem Laufwerk D erzeugt wird.
 
 Der dritte Schritt: Verwendung von Access ODBC-Verbindungszeichenfolge durch pypyodbc Modul A nach salesdb.mdb Datenbank-ODBC-Connection-Objekt conn verbunden:
+{{{
 >>>conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ=D:\\salesdb.mdb')
+}}}
 Und aus dieser Verbindung Objektoperation Cursor Aktuell Zugang zu einer Datenbank:
+{{{
 >>>cur = conn.cursor()
-
+}}}
 Der vierte Schritt, um einen neuen Umsatzrekord in der Datenbank-Tabelle saleout erstellen
 Wir führen Befehle mit dem Cursor auf einen SQL-Befehl an die Access-Datenbank übergeben, erstellen Sie eine Tabelle mit dem Namen saleout:
+{{{
 >>>cur.execute('''CREATE TABLE saleout (
 ID COUNTER PRIMARY KEY,
 customer_name VARCHAR(25), 
@@ -45,22 +53,27 @@ product_name VARCHAR(30),
 price float, 
 volume int,
 sell_time datetime);''')
-
+}}}
 ID (ID) der customer_name der Name des Kunden product_name (Handelsname), Preis (Verkaufspreis), Volumen (Menge) und sell_time (Verkauf Zeit) Tabelle: Diese Datenbank ist mit einem Tisch Feld erstellt.
 Schließlich gaben wir den Betrieb von der Vorderseite eines one-time, so dass sie offiziell wirksam in der Datenbank.
+{{{
 >>>cur.commit()
-
+}}}
 3) zum Umsatz Datensätze in der Tabelle, Einfügen von Datensätzen, Aufzeichnungen von Verkaufstransaktionen
 Nachdem die Datenbank erstellt wurde, können wir füllen Rekordumsatz.
 
 Der erste Schritt, verzeichneten wir einen Kunden von Herrn Chiang (Jiang Wen), am 21. Januar 2013, 5000,5 Yuan zu kaufen die beiden das Huawei Ascend Mate Telefon:
+{{{
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
 VALUES(?,?,?,?,?)''',(u'江文','Huawei Ascend mate','5000.5',2,'2012-1-21'))
+}}}
 Vergessen Sie nicht, unverzüglich den Betrag erfasst offiziell wirksam in der Datenbank:
+{{{
 >>>cur.commit()
-
+}}}
 
 Weiter haben wir dann Chargenprotokoll Anzahl der Verkäufe:
+{{{
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
 VALUES(?,?,?,?,?)''',(u'杨天真','Apple IPhone 5','6000.1',1,'2012-1-21'))
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
@@ -69,8 +82,11 @@ VALUES(?,?,?,?,?)''',(u'郑现实','Huawei Ascend D2','5100.5',1,'2012-1-22'))
 VALUES(?,?,?,?,?)''',(u'莫小闵','Huawei Ascend D2','5200.5',1,'2012-1-22'))
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
 VALUES(?,?,?,?,?)''',(u'顾小白','Huawei Ascend mate','5000.5',1,'2012-1-22'))
+}}}
 Unmittelbar offiziell unterbreiten Inkrafttreten in der Datenbank zur gleichen Zeit, diese vier Einträge:
+{{{
 >>>cur.commit()
+}}}
 
 An diesem Punkt haben wir 5 Verkäufe im System erfasst. In den folgenden Schritten werden wir abfragen diese Aufzeichnungen.
 
@@ -78,32 +94,40 @@ An diesem Punkt haben wir 5 Verkäufe im System erfasst. In den folgenden Schrit
 4) unter Verwendung von Python zur Abfrage von Daten in der Datenbank und Komprimierung Access-Datenbank-Datei
 Wenn wir auf 21. Januar 2012 abfragen wollen, tun unser Umsatz von Huawei-Produkte? Zu diesem Zeitpunkt werden wir eine SQL-Abfrage an die Access-Datenbank übergeben, und der Zugang zu einer Datenbank-Abfrage erhaltenen Ergebnisse als Python-Variablen zurückgegeben werden.
 First-Pass-SQL-Abfrage zur Datenbank Zugang:
+{{{
 >>>cur.execute('''SELECT * FROM saleout WHERE product_name LIKE '%Huawei%'''')
-
+}}}
 Dann kriechen die Feldnamen des Ergebnisses aus der Datenbank Abfrage-Ergebnisse fest:
+{{{
 >>>for d in cur.description:
     print d[0],
+}}}
 id customer_name product_name price volume sell_time
 
 Die interaktive Schnittstelle zeigt den Namen der einzelnen Felder. Wir nächsten Zeile für Zeile der Ergebnismenge wird auf dem Bildschirm angezeigt:
+{{{
 >>>for row in cur.fetchall():
     for field in row: 
         print field,
     print ''
+
 1 江文 Huawei Ascend mate 5000.5 2 2012-01-21 00:00:00
 3 郑现实 Huawei Ascend D2 5100.5 1 2012-01-22 00:00:00
 4 莫小闵 Huawei Ascend D2 5000.5 1 2012-01-22 00:00:00
 5 顾小白 Huawei Ascend mate 5000.5 1 2012-01-22 00:00:00
+}}}
 Dies zeigt, dass alle der Ergebnisgruppe.
 
 Für Access-Datenbanken, nach langen Einfügen von Daten, kann der Access-Datenbank-Datei zu sehr aufgebläht und riesig. PyPyODBC bietet weitere Funktionen können direkt die Bereinigung komprimierte Datenbank mit Code in Python-Programmen. Wir haben jetzt D: \ salesdb.mdb Kompression erzeugt eine Datei salesdb_backup.mdb:
 Zuerst schließen Sie die Datenbank-Verbindung:
+{{{
 >>>conn.close()
-
+}}}
 
 Die dann pypyodbc win_compact_mdb sauber komprimierte Datenbankdatei:
+{{{
 >>>pypyodbc.win_compact_mdb('D:\\salesdb.mdb','D:\\salesdb_backup.mdb')
-
+}}}
 Zu dieser Zeit finden Sie eine clean-up der komprimierten Datei salesdb_backup.mdb erzeugen das Laufwerk D, gibt es keinen großen Unterschied in diesem Fall die Größe der Datenbank, aber die Datenbank nach langen und häufigen Gebrauch der Kompression Wirkung der Bereinigung wird sehr alarmierend.
 
 Pflegen Sie ein Python-Programm und Gesamt-Datei
