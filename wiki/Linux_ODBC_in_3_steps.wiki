@@ -50,5 +50,7 @@ print conn
 }}}
 
 Buttoned up yet?
+
 [http://pypyodbc.googlecode.com/files/Logo.png]
+
 <g:plusone size="medium"></g:plusone>
