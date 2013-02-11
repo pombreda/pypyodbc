@@ -40,7 +40,7 @@ TDS_Version = 8.0
 client charset = UTF-8
 }}}
 
-
+    [http://code.google.com/p/pypyodbc/source/browse/trunk/pypyodbc/test.py http://pypyodbc.googlecode.com/svn/trunk/pypyodbc/Logo.gif]
 *At this point*, FreeTDS should be ready for use, we can use the pure Python ODBC library pypyodbc to test:
 {{{
 import pypyodbc
