@@ -36,8 +36,11 @@ client charset = UTF-8
 }}}
 
 
-At this point, FreeTDS with a good, we can use pure Python ODBC library pypyodbc to test:
+At this point, FreeTDS should be ready for use, we can use the pure Python ODBC library pypyodbc to test:
+{{{
 import pypyodbc
-pypyodbc.connect ('Driver = FreeTDS; Server = 192.168.1.2; port = 1433; uid = sa; pwd = pwd1; database = db_name')
+conn = pypyodbc.connect('Driver=FreeTDS;Server=192.168.1.2;port=1433;uid=sa;pwd=pwd1;database=db_name')
+print conn
+}}}
 
 Buttoned up yet?
