@@ -1,8 +1,8 @@
+#summary Create and Compact Access MDB files with python on win32 platform
 #labels Phase-Implementation,Featured
-#Create and Compact Access MDB files with python on win32 platform
 
 = PyPyODBC functions for generating MDB file =
-
+<g:plusone size="medium"></g:plusone>
 You can use pypyodbc to easily create an empty Access MDB file on win32 platform, and also compact existing Access MDB files.
 
 
