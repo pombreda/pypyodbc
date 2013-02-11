@@ -3,7 +3,7 @@
 = Have your Linux box setup for ODBC & FreeTDS in 3 steps, and start using it in Python =
 
 [http://code.google.com/p/pypyodbc/source/browse/trunk/pypyodbc/test.py http://pypyodbc.googlecode.com/svn/trunk/pypyodbc/Logo.gif]
----- 
+----
 In Linux, to use ODBC driver connecting to MS SQLServer, we need to install and configure ODBC for Linux. To accomplish that, many tutorials listed complicated steps which might be hard to understand and follow. 
 
 To easy the process, I will list the minimum steps you need to do in 3 steps:
