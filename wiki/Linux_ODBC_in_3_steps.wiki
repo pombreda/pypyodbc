@@ -9,7 +9,7 @@ In Linux, to use ODBC driver connecting to MS SQLServer, we need to install and 
 To easy the process, I will list the minimum steps you need to do in 3 steps:
 
 
-The tutorial based on fresh installed Ubuntu 12.04 environment:
+The tutorial is based on the fresh installed Ubuntu 12.04 environment:
 
 == 1. Install the ODBC module unixodbc for Linux, and the MSSQL ODBC Driver FreeTDS ==
 
