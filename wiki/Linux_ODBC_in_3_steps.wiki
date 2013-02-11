@@ -25,7 +25,7 @@ Explanation: tdsodbc is FreeTDS's key package, it contains the MSSQL odbc driver
 == 2. Modify /etc/odbcinst.ini (if the file doesn't exist under /etc, create the file), make sure you have the below content in the file ==
 {{{
 [FreeTDS]
-Driver = / usr/lib/i386-linux-gnu/libtdsodbc.so
+Driver = /usr/lib/i386-linux-gnu/libtdsodbc.so
 }}}
 
 The third step, modify / etc / freetds / freetds.conf
