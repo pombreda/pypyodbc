@@ -42,7 +42,7 @@ client charset = UTF-8
 }}}
 
 ----
-*At this point*, FreeTDS should be ready for use, we can use the pure Python ODBC library pypyodbc to test:
+== At this point*, FreeTDS should be ready for use, we can use the pure Python ODBC library pypyodbc to test ==
 [http://pypyodbc.googlecode.com/files/Logo.png]
 <g:plusone size="medium"></g:plusone>
 {{{
