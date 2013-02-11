@@ -1,4 +1,4 @@
-#Minimum steps to setup ODBC in Linux for pypyodbc
+#summary Minimum steps to setup ODBC in Linux for pypyodbc
 
 = Have your Linux box setup for ODBC & FreeTDS in 3 steps, and start using it in Python =
 
