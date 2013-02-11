@@ -4,7 +4,7 @@
 
 [http://pypyodbc.googlecode.com/files/Logo.png]
 
-<g:plusone size="medium"></g:plusone>
+
 ----
 In Linux, to use ODBC driver connecting to MS SQLServer, we need to install and configure ODBC for Linux. To accomplish that, many tutorials listed complicated steps which might be hard to understand and follow. 
 
@@ -51,3 +51,5 @@ print conn
 }}}
 
 Buttoned up yet?
+
+<g:plusone size="medium"></g:plusone>
