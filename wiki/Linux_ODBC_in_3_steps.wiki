@@ -1,31 +1,32 @@
 #Minimum steps to setup ODBC in Linux for pypyodbc
 
-= Have your Linux box setup for ODBC, FreeTDS in 3 steps, and start using it in Python =
+= Have your Linux box setup for ODBC & FreeTDS in 3 steps, and start using it in Python =
 
 In Linux, to use ODBC driver connecting to MS SQLServer, we need to install and configure ODBC for Linux. To accomplish that, many tutorials listed complicated steps which might be hard to understand and follow. 
 
 To easy the process, I will list the minimum steps you need to do in 3 steps:
 
 
+The tutorial based on fresh installed Ubuntu 12.04 environment:
 
-= 1. Install the ODBC module unixodbc for Linux, and the MSSQL ODBC Driver FreeTDS =
+== 1. Install the ODBC module unixodbc for Linux, and the MSSQL ODBC Driver FreeTDS ==
 
-Command: command-line terminal, enter the command:
-{{{sudo apt-get install tdsodbc unixodbc}}}
-And enter the system administrator password.
-Description: tdsodbc the the FreeTDS key package, contain MSSQL driver files libtdsodbc.so, unixodbc on Linux ODBC framework containing critical binaries: libtdsodbc.so or libtdsodbc.so.1
+In command-line terminal, enter command:
+{{{
+sudo apt-get install tdsodbc unixodbc
+}}}
 
-
-The tutorial just installed Ubuntu 12.04 environment, for example:
-
-The first step f:
+Explanation: tdsodbc is FreeTDS's key package, it contains the MSSQL odbc driver libtdsodbc.so; unixodbc is Linux's ODBC framework, the package contains critical binary files: libtdsodbc.so or libtdsodbc.so.1
 
 
 
-The second step, modify / etc / odbcinst.ini (not New this file in / etc / under), joined in the file:
+
+
+== 2. Modify /etc/odbcinst.ini (if the file doesn't exist under /etc, create the file), make sure you have the below content in the file ==
+{{{
 [FreeTDS]
 Driver = / usr/lib/i386-linux-gnu/libtdsodbc.so
-
+}}}
 
 The third step, modify / etc / freetds / freetds.conf
 The file [Global] section, make sure the following two, if not to fill:
