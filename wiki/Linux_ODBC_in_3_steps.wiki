@@ -47,7 +47,7 @@ client charset = UTF-8
 {{{
 import pypyodbc
 conn = pypyodbc.connect('Driver=FreeTDS;Server=192.168.1.2;port=1433;uid=sa;pwd=pwd1;database=db_name')
-print conn
+print conn.cursor().execute('select * from a_table').fetchone()[0]
 }}}
 
 Buttoned up yet?
