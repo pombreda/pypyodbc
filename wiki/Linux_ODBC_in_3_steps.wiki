@@ -31,7 +31,7 @@ If odbcinst.ini doesn't exist under /etc, create the file.
 Driver = /usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so
 }}}
 
-libtdsodbc.so is usually under /usr/lib/i386-linux-gnu/odbc/ on 32bit Linux, /usr/lib/x86_64-linux-gnu/odbc/ on 64bit Linux, /usr/lib/odbc/ on older version Linux.
+*Note:* libtdsodbc.so is usually under /usr/lib/i386-linux-gnu/odbc/ on 32bit Linux, /usr/lib/x86_64-linux-gnu/odbc/ on 64bit Linux, /usr/lib/odbc/ on older version Linux.
 
 
 == 3. Modify /etc/freetds/freetds.conf ==
