@@ -29,3 +29,6 @@ from sqlalchemy.dialects.mssql import base, pyodbc, adodbapi, \
 Now you can use SQLAlchemy with below code:
 
 engine = create_engine('mssql+*pypyodbc*://MSSQL_DSN')
+
+
+<g:plusone size="medium"></g:plusone>
