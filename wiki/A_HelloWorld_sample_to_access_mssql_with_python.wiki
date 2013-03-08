@@ -7,6 +7,7 @@
 import pypyodbc
 
 # Get a connection to MSSQL ODBC DSN, and assign it to conn
+#
 conn = pypyodbc.connect('DSN = MSSQL_DSN')
 
 # Give me a cursor so I can operate with the cursor
