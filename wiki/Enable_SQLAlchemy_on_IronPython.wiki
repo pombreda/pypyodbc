@@ -3,7 +3,7 @@
 
 = IronPython running SQLAlchemy with pypyodbc=
 
-With the pure Python ODBC interface library, pypyodbc, by simple extending SQLAlchemy, IronPython also can use SQLAlchemy. There are four steps to do so:
+With the pure Python ODBC interface library, pypyodbc, by simply extending SQLAlchemy, IronPython also can use SQLAlchemy. There are four steps to do so:
 
 ===Install pypyodbc for IronPython===
 
