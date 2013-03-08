@@ -23,7 +23,7 @@ cur = conn.cursor()
 #              Create a saleout table in SQLServer
 
 cur.execute('''CREATE TABLE saleout (
-ID COUNTER PRIMARY KEY,
+ID integer PRIMARY KEY IDENTITY,
 customer_name VARCHAR(25), 
 product_name VARCHAR(30), 
 price float, 
@@ -77,7 +77,7 @@ for d in cur.description:
 
 #              Start a new line
 
-print ''
+print ('')
 
 
 #              Print the table, one row per line
