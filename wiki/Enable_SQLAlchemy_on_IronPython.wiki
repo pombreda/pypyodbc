@@ -1,5 +1,5 @@
+#summary Steps to install pypyodbc on Ironpython and enable SQLAlchemy support
 #labels Featured
-#Steps to install pypyodbc on Ironpython and enable SQLAlchemy support
 
 = IronPython running SQLAlchemy with pypyodbc=
 
