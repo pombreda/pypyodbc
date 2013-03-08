@@ -10,7 +10,7 @@
 import pypyodbc
 
 
-#              Get a connection to MSSQL ODBC DSN, and assign it to conn
+#              Get a connection to MSSQL ODBC DSN by pypyodbc, and assign it to conn
 #
 conn = pypyodbc.connect('DSN = MSSQL_DSN')
 
