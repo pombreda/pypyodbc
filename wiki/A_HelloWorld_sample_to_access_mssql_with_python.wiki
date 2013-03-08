@@ -10,6 +10,7 @@ import pypyodbc
 #
 conn = pypyodbc.connect('DSN = MSSQL_DSN')
 
+
 # Give me a cursor so I can operate with the cursor
 #
 cur = conn.cursor()
@@ -24,6 +25,7 @@ product_name VARCHAR(30),
 price float, 
 volume int,
 sell_time datetime);''')
+
 
 # Let that take effective, Now!
 #
@@ -58,14 +60,17 @@ cur.commit()
 #
 cur.execute('''SELECT * FROM saleout WHERE product_name LIKE '%Huawei%';''')
 
+
 # Print the table headers (column descriptions)
 #
 for d in cur.description: 
     print d[0],
 
+
 # Start a new line
 #
 print ''
+
 
 # Print the table, one row per line
 #
