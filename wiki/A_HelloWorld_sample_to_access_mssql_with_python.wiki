@@ -1,5 +1,4 @@
 #summary A HelloWorld sample to access SQLServer with python
-#labels Featured
 
 = A !HelloWorld sample to access SQLServer with python <g:plusone size="tall"></g:plusone>=
 
