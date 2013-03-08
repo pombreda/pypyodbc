@@ -1,9 +1,9 @@
-#summary Steps to install pypyodbc on !IronPython and enable SQLAlchemy support
+#summary Steps to install pypyodbc on IronPython and enable SQLAlchemy support
 #labels Featured
 
 = !IronPython running SQLAlchemy with pypyodbc=
 
-With the pure Python ODBC interface library, pypyodbc, by simply extending SQLAlchemy, !IronPython also can use SQLAlchemy. There are four steps to do so:
+With the pure Python ODBC DBABI 2.0 compliant library, pypyodbc, by simply extending SQLAlchemy, !IronPython also can use SQLAlchemy. There are four steps to do so:
 
 ===Install pypyodbc for !IronPython===
 
