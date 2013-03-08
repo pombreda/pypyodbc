@@ -3,7 +3,7 @@
 
 = !IronPython running SQLAlchemy with pypyodbc=
 
-With the pure Python ODBC DBABI 2.0 compliant library, pypyodbc, by simply extending SQLAlchemy, !IronPython also can use SQLAlchemy. There are four steps to do so:
+With the pure Python DBABI 2.0 compliant ODBC library, pypyodbc, by simply extending SQLAlchemy, !IronPython also can use SQLAlchemy. There are four steps to do so:
 
 ===Install pypyodbc for !IronPython===
 
