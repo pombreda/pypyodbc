@@ -19,7 +19,7 @@ Then we simply extend SQLAlchemy so it can use the pypyodbc library installed in
 
   * *Step 3:* Create a copy of !IronPython 2.7\Lib\site-packages\sqlalchemy\dialects\mssql\pyodbc.py and rename it to pypyodbc.py, and then replace all "pyodbc" in the new pypyodbc.py to "pypyodbc".
 
-  * *Step 4:* Modify !IronPython 2.7\Lib\site-packages\sqlalchemy\dialects\mssql_init_.py, in the import line, add *pypyodbc* after mxodbc, like this: 
+  * *Step 4:* Modify !IronPython 2.7\Lib\site-packages\sqlalchemy\dialects\mssql\__init__.py, in the import line, add *pypyodbc* after mxodbc, like this: 
 
 {{{
 from sqlalchemy.dialects.mssql import base, pyodbc, adodbapi, \ 
