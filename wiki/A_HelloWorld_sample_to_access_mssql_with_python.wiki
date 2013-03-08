@@ -72,7 +72,7 @@ cur.execute('''SELECT * FROM saleout WHERE product_name LIKE '%Huawei%';''')
 #              Print the table headers (column descriptions)
 
 for d in cur.description: 
-    print d[0],
+    print (d[0], end=" ")
 
 
 #              Start a new line
@@ -84,8 +84,8 @@ print ''
 
 for row in cur.fetchall():
     for field in row: 
-        print field,
-    print ''
+        print (field, end=" ")
+    print ('')
     
 
 #              I have done all the things, you can leave me and serve for others!
