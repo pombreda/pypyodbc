@@ -7,7 +7,9 @@ With the pure Python ODBC interface library, pypyodbc, by simple extending SQLAl
 
 ===Install pypyodbc for IronPython===
 
-  * Step 1: direct put pypyodbc.py under IronPython site-packages directory: IronPython 2.7\Lib\site-packages.
+  * Step 1: Direct put the file pypyodbc.py under the IronPython instance's site-packages directory: IronPython 2.7\Lib\site-packages.
+  
+  Now you can try if "import pypyodbc" can success in IronPython's interactive window.
 
 
 ===Extend SQLAlchemy drivers===
