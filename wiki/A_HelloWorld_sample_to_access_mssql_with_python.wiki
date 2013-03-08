@@ -1,4 +1,4 @@
-#summary A !HelloWorld sample to access mssql with python
+#summary A HelloWorld sample to access mssql with python
 #labels Featured
 
 = A !HelloWorld sample to access mssql with python =
