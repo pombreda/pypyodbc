@@ -1,7 +1,7 @@
 #summary Steps to install pypyodbc on Ironpython and enable SQLAlchemy support
 #labels Featured
 
-= [http://ironpython.codeplex.com IronPython] running SQLAlchemy with pypyodbc=
+= IronPython running SQLAlchemy with pypyodbc=
 
 With the pure Python ODBC interface library, pypyodbc, by simply extending SQLAlchemy, IronPython also can use SQLAlchemy. There are four steps to do so:
 
