@@ -5,22 +5,22 @@
 
 {{{
 
-# We will use the tool pypyodbc for Python to connect to ODBC
-#
+#              We will use the tool pypyodbc for Python to connect to ODBC
+#         
 import pypyodbc
 
 
-# Get a connection to MSSQL ODBC DSN, and assign it to conn
+#              Get a connection to MSSQL ODBC DSN, and assign it to conn
 #
 conn = pypyodbc.connect('DSN = MSSQL_DSN')
 
 
-# Give me a cursor so I can operate with the cursor
+#              Give me a cursor so I can operate with the cursor
 #
 cur = conn.cursor()
 
 
-# Create a saleout table in SQLServer
+#              Create a saleout table in SQLServer
 #
 cur.execute('''CREATE TABLE saleout (
 ID COUNTER PRIMARY KEY,
@@ -31,23 +31,23 @@ volume int,
 sell_time datetime);''')
 
 
-# Let that take effective, Now!
+#              Let that take effective, Now!
 #
 cur.commit()
 
 
-# Insert a row to the saleout table
+#              Insert a row to the saleout table
 #
 cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
 VALUES(?,?,?,?,?)''',(u'江文','Huawei Ascend mate','5000.5',2,'2012-1-21'))
 
 
-# Let that take effective, Now!
+#              Let that take effective, Now!
 #
 cur.commit()
 
 
-# Insert several rows to the saleout table
+#              Insert several rows to the saleout table
 #
 cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
 VALUES(?,?,?,?,?)''',(u'杨天真','Apple IPhone 5','5500.1',1,'2012-1-21'))
@@ -59,28 +59,28 @@ cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_
 VALUES(?,?,?,?,?)''',(u'顾小白','Huawei Ascend mate','5000.5',1,'2012-1-22'))
 
 
-# Let that take effective, Now!
+#              Let that take effective, Now!
 #
 cur.commit()
 
 
-# Select those records about "Huawei"
+#              Select those records about "Huawei"
 #
 cur.execute('''SELECT * FROM saleout WHERE product_name LIKE '%Huawei%';''')
 
 
-# Print the table headers (column descriptions)
+#              Print the table headers (column descriptions)
 #
 for d in cur.description: 
     print d[0],
 
 
-# Start a new line
+#              Start a new line
 #
 print ''
 
 
-# Print the table, one row per line
+#              Print the table, one row per line
 #
 for row in cur.fetchall():
     for field in row: 
@@ -88,7 +88,7 @@ for row in cur.fetchall():
     print ''
     
 
-# I have done all the things, you can leave me and serve for others!
+#              I have done all the things, you can leave me and serve for others!
 #
 conn.close()
 
