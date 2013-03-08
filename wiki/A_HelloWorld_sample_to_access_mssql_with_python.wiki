@@ -4,6 +4,9 @@
 = A !HelloWorld sample to access mssql with python =
 
 {{{
+
+# We will use the tool pypyodbc for Python to connect to ODBC
+#
 import pypyodbc
 
 # Get a connection to MSSQL ODBC DSN, and assign it to conn
@@ -36,6 +39,10 @@ cur.commit()
 #
 cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
 VALUES(?,?,?,?,?)''',(u'江文','Huawei Ascend mate','5000.5',2,'2012-1-21'))
+
+
+# Let that take effective, Now!
+#
 cur.commit()
 
 
