@@ -50,6 +50,6 @@ conn = pypyodbc.connect('Driver=FreeTDS;Server=192.168.1.2;port=1433;uid=sa;pwd=
 print conn.cursor().execute('select * from a_table').fetchone()[0]
 }}}
 
-Buttoned up yet?  <g:plusone size="medium"></g:plusone>
+Buttoned up yet?  <g:plusone size="tall"></g:plusone>
 
 [http://pypyodbc.googlecode.com/files/Logo.png]
