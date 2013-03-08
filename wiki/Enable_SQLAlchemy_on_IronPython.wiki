@@ -9,7 +9,7 @@ With the pure Python DBABI 2.0 compliant ODBC library, pypyodbc, by simply exten
 
   * *Step 1:* Copy the file pypyodbc.py to the !IronPython instance's site-packages directory: !IronPython 2.7\Lib\site-packages.
   
-  This installs pypyodbc for !IronPython. Now you can try if "import pypyodbc" works in !IronPython's interactive window.
+  This installs pypyodbc for !IronPython. Now you can try if "*import pypyodbc*" succeeds in !IronPython's interactive window.
 
 
 ===Extend SQLAlchemy drivers===
