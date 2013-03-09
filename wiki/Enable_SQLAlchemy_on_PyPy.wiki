@@ -1,4 +1,5 @@
 #summary Steps to install pypyodbc on PyPy and enable SQLAlchemy support
+#labels Featured
 
 = !PyPy running SQLAlchemy with pypyodbc=
 
