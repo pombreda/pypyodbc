@@ -2,7 +2,7 @@
 
 = !PyPy running SQLAlchemy with pypyodbc=
 
-With the pure Python DBABI 2.0 compliant ODBC library, pypyodbc, by simply extending SQLAlchemy, !PyPy also can use SQLAlchemy. There are four steps to do so:
+With the pure Python ODBC library, pypyodbc, by simply extending SQLAlchemy, !PyPy also can use SQLAlchemy. There are four steps to do so:
 
 ===Install pypyodbc for !PyPy===
 
