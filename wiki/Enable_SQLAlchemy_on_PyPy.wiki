@@ -11,7 +11,7 @@ With the pure Python ODBC library, pypyodbc, by simply extending SQLAlchemy, !Py
   This installs pypyodbc for !PyPy. Now you can try if "*import pypyodbc*" succeeds in !PyPy's interactive window.
 
 ===Install SQLAlchemy for !PyPy===
-You can skip this step if you know how to install SQLAlchemy for !PyPy. [https://pypi.python.org/pypi/SQLAlchemy Download SQLAlchemy Source Package], unzip the package, then just copy the sub-folder sqlalchemy located under the unzipped folder 'SQLAlchemy-0.7.10.tar\SQLAlchemy-0.7.10\lib\' to !PyPy instance's site-packages directory: !PyPy 1.9\Lib\site-packages.
+You can skip this step if you know how to install SQLAlchemy for !PyPy. [https://pypi.python.org/pypi/SQLAlchemy Download SQLAlchemy Source Package], unzip the package, then just copy the sub-folder *sqlalchemy* located under the unzipped folder 'SQLAlchemy-0.7.10.tar\SQLAlchemy-0.7.10\lib\' to !PyPy instance's site-packages directory: !PyPy 1.9\Lib\site-packages.
   This installs pypyodbc for !PyPy. Now you can try if "*import sqlalchemy*" succeeds in !PyPy's interactive window.
 
 
