@@ -4,12 +4,12 @@
 
 {{{
 
-#              We will use the tool pypyodbc for Python to connect to ODBC
+#              Let Python load it's ODBC connecting tool pypyodbc
      
 import pypyodbc
 
 
-#              Get a connection to MSSQL ODBC DSN by pypyodbc, and assign it to conn
+#              Get a connection to MSSQL ODBC DSN via pypyodbc, and assign it to conn
 
 conn = pypyodbc.connect('DSN = MSSQL_DSN')
 
