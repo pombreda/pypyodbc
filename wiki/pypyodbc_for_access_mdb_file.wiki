@@ -12,7 +12,7 @@ Import pypyodbc in you scrpt and:
   * To create an Access mdb file
 {{{
 import pypyodbc
-pypyodbc.win_create_mdb( "D:\\Your MDB file path.mdb" )
+pypyodbc.win_create_mdb( "D:\\Your_MDB_file_path.mdb" )
 }}}
 
   * Then you can continue to use pypyodbc to connect to those mdb files and manipulate them with ODBC interface
@@ -21,8 +21,7 @@ conn = pypyodbc.connect(u'''Driver={Microsoft Access Driver (*.mdb)};DBQ='''+mdb
       , unicode_results = True, readonly = False)
 
 cur = conn.cursor()
-cur.execute ('Drop table pypyodbc_test_tabl')
-cur.execdirect(u"""create table pypyodbc_test_tabl (ID integer PRIMARY KEY,product_name text)""")
+cur.execute(u"""create table pypyodbc_test_tabl (ID integer PRIMARY KEY,product_name text)""")
 
 ...
 cur.close()
