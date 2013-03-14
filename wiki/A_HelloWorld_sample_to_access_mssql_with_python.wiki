@@ -49,13 +49,13 @@ cur.commit()
 #                  Insert several rows to the saleout table
 
 cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',      (u'杨天真','Apple IPhone 5','5500.1',1,'2012-1-21'))
+VALUES(?,?,?,?,?)''',      (u'杨天真','Apple IPhone 5',5500.1,1,'2012-1-21'))
 cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',      (u'郑现实','Huawei Ascend D2','5100.5',1,'2012-1-22'))
+VALUES(?,?,?,?,?)''',      (u'郑现实','Huawei Ascend D2',5100.5,2,'2012-1-22'))
 cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',      (u'莫小闵','Huawei Ascend D2','5000.5',1,'2012-1-22'))
+VALUES(?,?,?,?,?)''',      (u'莫小闵','ZTE Grand S',5000.5,3,'2012-1-22'))
 cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',      (u'顾小白','Huawei Ascend mate','5000.5',1,'2012-1-22'))
+VALUES(?,?,?,?,?)''',      (u'顾小白','Huawei Ascend Mate',5000.',2,'2012-1-22'))
 
 
 #                  Let that take effective, Now!
