@@ -17,7 +17,7 @@ pypyodbc.win_create_mdb( "D:\\Your_MDB_file_path.mdb" )
 
   * Then you can continue to use pypyodbc to connect to those mdb files and manipulate them with ODBC interface
 {{{
-conn = pypyodbc.connect(u'''Driver={Microsoft Access Driver (*.mdb)};DBQ='''+mdb_path
+conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ='+mdb_path
       , unicode_results = True, readonly = False)
 
 cur = conn.cursor()
