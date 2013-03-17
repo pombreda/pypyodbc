@@ -6,8 +6,8 @@ In most cases, you can simply try pypyodbc in your existing pyodbc powered scrip
 with the following changes:
 
 {{{
-#import pyodbc <-- The original pyodbc importing line
-import pypyodbc as pyodbc # Let pypyodbc acting as the pyodbc
+#import pyodbc            <-- Comment out the original pyodbc importing line
+import pypyodbc as pyodbc         # Let pypyodbc acting as the pyodbc
 
 pyodbc.connect(...) # Most original pyodbc calling lines requires no change.
 
