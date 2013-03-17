@@ -10,6 +10,7 @@ You can use pypyodbc to easily create an empty Access MDB file on win32 platform
 
 Import pypyodbc in you scrpt and:
   * To create an Access mdb file
+
 {{{
 import pypyodbc
 pypyodbc.win_create_mdb( "D:\\Your_MDB_file_path.mdb" )
@@ -36,6 +37,7 @@ conn.close()
 
 
   * Finally, To compact an existing Access mdb file
+
 {{{
 pypyodbc.win_compact_mdb("D:\\The path to the original to be compacted mdb file"
                        ,"D:\\The path to put the compacted new mdb file")
