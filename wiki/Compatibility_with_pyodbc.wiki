@@ -1,0 +1,23 @@
+#summary Compatibility and incompatibility with pyodbc
+
+Generally, the API of pypyodbc is similar to pyodbc by large. Their known differences are listed below.
+
+
+= Not existing features in pypyodbc =
+  * query parameters format
+{{{
+cursor.execute("select a from tbl where b=? and c=?", x, y) # This doesn't work
+cursor.execute("select a from tbl where b=? and c=?", (x, y)) # This works
+}}}
+  * field name as cursor attribute
+{{{
+cursor.execute("select album_id, photo_id from photos where user_id=1")
+for row in cursor:
+    print row.album_id, row.photo_id # This doesn't work
+    print row.album_id, row[1] # This works
+}}}
+
+
+= Not existing features in pyodbc =
+  * Access MDB file creation and compacting, namely, the pypyodbc.win_create_mdb function and the pypyodbc.win_compact_mdb function
+}}}
