@@ -1,6 +1,20 @@
 #summary Compatibility and incompatibility with pyodbc
 
-Generally, the API of pypyodbc is similar to pyodbc by large. Their known differences are listed below.
+Generally, the API of pypyodbc is quite similar to pyodbc. In most cases, you can simply try pypyodbc in your existing pyodbc powered script
+with the following changes:
+
+{{{
+#import pyodbc <-- The original pyodbc importing line
+import pypyodbc as pyodbc # Let pypyodbc acting as the pyodbc
+
+pyodbc.connect(...) # Most original pyodbc calling lines requires no change.
+
+}}}
+
+
+
+
+Their known differences are listed below.
 
 
 = Not existing features in pypyodbc =
