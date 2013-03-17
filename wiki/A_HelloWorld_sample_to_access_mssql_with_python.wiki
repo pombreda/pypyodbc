@@ -95,4 +95,6 @@ conn.close()
 
 }}}
 
-See also: [https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file Create and Compact Access MDB files with python on win32 platform]
+==See also:==
+[https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file Create, compact and operate Access MDB files with pypyodbc on win32 platform]
+[http://blog.sina.com.cn/s/blog_6c64ac1501019ns8.html Python Database Programming Quick Start Tutorial (EN Version)]
