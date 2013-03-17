@@ -15,7 +15,8 @@ import pypyodbc
 pypyodbc.win_create_mdb( "D:\\Your_MDB_file_path.mdb" )
 }}}
 
-  * Then you can continue to use pypyodbc to connect to those mdb files and manipulate them with ODBC interface
+  * As an Python ODBC DBI 2.0 module, you can continue to use pypyodbc to connect to the created mdb files and manipulate them with ODBC interface. Below is a demo snippet, you can refer to [https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python this article] to know more about pypyodbc DBI programming.
+
 {{{
 conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ='+mdb_path
       , unicode_results = True, readonly = False)
