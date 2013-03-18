@@ -6,10 +6,10 @@ In most cases, you can simply try pypyodbc in your existing pyodbc powered scrip
 with the following changes:
 
 {{{
-#import pyodbc            <-- Comment out the original pyodbc importing line
+#import pyodbc                    <-- Comment out the original pyodbc importing line
 import pypyodbc as pyodbc         # Let pypyodbc acting as the pyodbc
 
-pyodbc.connect(...) # Most original pyodbc calling lines requires no change.
+pyodbc.connect(...)               # Most original pyodbc calling lines requires no change.
 
 }}}
 
@@ -22,18 +22,18 @@ Their known differences are listed below.
 = Not existing features in pypyodbc =
   * query parameters format
 {{{
-cursor.execute("select a from tbl where b=? and c=?", x, y) # This doesn't work
+cursor.execute("select a from tbl where b=? and c=?", x, y)   # This doesn't work
 cursor.execute("select a from tbl where b=? and c=?", (x, y)) # This works
 
-cursor.execute("select a from tbl where b=?", x) # This doesn't work
-cursor.execute("select a from tbl where b=?", (x, )) # This works
+cursor.execute("select a from tbl where b=?", x)              # This doesn't work
+cursor.execute("select a from tbl where b=?", (x, ))          # This works
 }}}
   * field name as cursor attribute
 {{{
 cursor.execute("select album_id, photo_id from photos where user_id=1")
 for row in cursor:
-    print row.album_id, row.photo_id # This doesn't work
-    print row.album_id, row[1] # This works
+    print row.album_id, row.photo_id                          # This doesn't work
+    print row.album_id, row[1]                                # This works
 }}}
 
 
