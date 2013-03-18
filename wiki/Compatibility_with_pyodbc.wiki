@@ -24,6 +24,9 @@ Their known differences are listed below.
 {{{
 cursor.execute("select a from tbl where b=? and c=?", x, y) # This doesn't work
 cursor.execute("select a from tbl where b=? and c=?", (x, y)) # This works
+
+cursor.execute("select a from tbl where b=?", x) # This doesn't work
+cursor.execute("select a from tbl where b=?", (x, )) # This works
 }}}
   * field name as cursor attribute
 {{{
