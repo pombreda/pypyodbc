@@ -98,6 +98,6 @@ conn.close()
 ==See also:==
 [https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file pypyodbc's Access MDB file support on Win32 platform]
 
-[https://code.google.com/p/pypyodbc/wiki/Compatibility_with_pyodbc Compatibility and incompatibility with pyodbc]
+[https://code.google.com/p/pypyodbc/wiki/Compatibility_with_pyodbc pypyodbc's compatibility and incompatibility with pyodbc]
 
 [http://blog.sina.com.cn/s/blog_6c64ac1501019ns8.html Python Database Programming Quick Start Tutorial (EN Version)]
