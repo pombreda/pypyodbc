@@ -39,7 +39,7 @@ conn.close()
    
 
 }}}
-*You can refer to [https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python this article] to know more about DBI programming with pypyodbc.*
+*You can refer to [https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python Connect to SQLserver sample] to know more about DBI programming with pypyodbc.*
 
   * Finally, To compact an existing Access mdb file
 
