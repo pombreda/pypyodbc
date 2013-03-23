@@ -26,7 +26,7 @@ conn = pypyodbc.win_connect_mdb("D:\\Your_MDB_file_path.mdb")  # new in version 
 
 
 # Below is common ODBC connection string style to connect to mdb file
-#conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ='+mdb_path, unicode_results = True, readonly = False)  
+#conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ='+mdb_path, unicode_results = True)  
 
 
 cur = conn.cursor()
