@@ -22,7 +22,7 @@ Below is a demo snippet:
 
 {{{
 
-conn = pypyodbc.win_connect_mdb("D:\\Your_MDB_file_path.mdb")  #new in version 1.0.11
+conn = pypyodbc.win_connect_mdb("D:\\Your_MDB_file_path.mdb")  # new in version 1.0.11
 
 #conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ='+mdb_path, unicode_results = True, readonly = False)  # ODBC connection string style
 
