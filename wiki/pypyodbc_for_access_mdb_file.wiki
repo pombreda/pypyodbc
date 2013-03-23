@@ -49,4 +49,4 @@ pypyodbc.win_compact_mdb("D:\\The path to the original to be compacted mdb file"
 }}}
 
 ==See also==
-===[https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python SQLServer: Hello PyPyODBC]===
+===[https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python PyPyODBC: Hello SQLServer]===
