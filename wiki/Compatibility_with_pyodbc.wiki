@@ -38,5 +38,6 @@ for row in cursor:
 
 
 = Not existing features in pyodbc =
-  * [https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file Access MDB file creation and compacting functions], namely, the *pypyodbc.win_create_mdb* function, the *pypyodbc.win_connect_mdb* function and the *pypyodbc.win_compact_mdb* function
+  * [https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file Access MDB file creation and compacting functions], namely:
+  *pypyodbc.win_create_mdb*, *pypyodbc.win_connect_mdb* and *pypyodbc.win_compact_mdb*
 }}}
