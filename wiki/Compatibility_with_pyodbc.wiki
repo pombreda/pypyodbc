@@ -34,6 +34,7 @@ cursor.execute("select album_id, photo_id from photos where user_id=1")
 for row in cursor:
     print row.album_id, row.photo_id                          # This doesn't work
     print row[0], row[1]                                      # This works
+
 # Starting from pypyodbc version 1.1, a get methoud has been added to the row object:
     print row.get('album_id'), row.get('photo_id')            # This works
 }}}
