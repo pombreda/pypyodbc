@@ -31,6 +31,7 @@ cursor.execute("select a from tbl where b=?", (x, ))          # This works
   * field name as cursor attribute
 {{{
 cursor.execute("select album_id, photo_id from photos where user_id=1")
+
 for row in cursor:
     print row.album_id, row.photo_id                          # This doesn't work
 
