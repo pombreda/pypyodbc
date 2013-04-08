@@ -35,7 +35,9 @@ for row in cursor:
     print row.album_id, row.photo_id                          # This doesn't work
 
     print row['album_id'], row['photo_id']                    # This works
+
     print row[0], row[1]                                      # This works
+
     print row.get('album_id'), row.get('photo_id')            # This works
 }}}
 
