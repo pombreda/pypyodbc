@@ -6,3 +6,5 @@ Today, I would use a simple sales database programing case to guide the interest
   # Record sales transactions by inserting records in the table;
   # Use Python to query data in the database and compress the MS-Access database file.
 Ready? Let's begin!
+
+===1) Introduce and install Python & an ODBC module pypyodbc===
