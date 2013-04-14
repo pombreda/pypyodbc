@@ -43,3 +43,22 @@ That means you can now type codes after this >>> symbol, step-by-step manipulati
 {{{
 >>> import pypyodbc
 }}}
+
+http://s11.sinaimg.cn/mw690/6c64ac15g7b9e84f60e0a&690?b=x.png
+
+Step two: We want to create an Access database to store sales data. This is a featured function of PyPyODBC, so users can easily use it to create a blank Access database on Windows platforms. We name the Access database salesdb.mdb, and put it under the root directory of D drive.
+{{{
+>>> pypyodbc.win_create_mdb('D:\\salesdb.mdb')
+}}}
+At this time, you can see a blank Access database file salesdb.mdb is generated in the D drive.
+
+
+
+
+
+
+
+
+
+
+
