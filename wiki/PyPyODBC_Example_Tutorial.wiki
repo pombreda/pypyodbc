@@ -30,3 +30,16 @@ Okay, we have Python and PyPyODBC installed, and now we can begin writing some r
 
 
 ===2) Create an Access database and a sales table in this database===
+
+From here on, in order for uses to understand the effect of each step, we will write codes in the Python interactive window interface (Shell) step by step, and finally, we will concentrate these interactive codes to a script file, and become a program file.
+
+Let's open the Python interface: find Python 2.7 directory from the Windows Start menu, click to run Python 2.7 (command line), there will be a white on black text input window pop up, containing the following words.
+{{{
+Python 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license ()" for more information.
+>>>
+}}}
+That means you can now type codes after this >>> symbol, step-by-step manipulating Python to complete actions. We now go step by step: The first step: We command Python to identify the just installed pypyodbc module from it's module library, for us to use in the next steps.
+{{{
+>>> import pypyodbc
+}}}
