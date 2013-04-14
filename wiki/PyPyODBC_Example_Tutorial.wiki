@@ -114,6 +114,7 @@ Immediately submit the changes, so these 4 records officially come into effect a
 >>>cur.commit()
 }}}
 At this point, we have 5 sales transactions recorded in the system. In the following steps, we will query these records.
+
 _
 *Q: Can I just use below method to insert data by generating plain SQL? Why do you use question marks and parameters?*
 {{{
