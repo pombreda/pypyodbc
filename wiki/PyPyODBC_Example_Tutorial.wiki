@@ -1,10 +1,9 @@
 #summary Python Database Programming Quick Start Tutorial.
 
-*
+
 {{{
 This example tutorial is published under Public Domain, readers can freely use the content of it.
 }}}
-*
 
 Today, I would use a simple sales database programing case to guide the interested readers the entry-level Python database programming techniques. We will use Python to create a simple MS-Access sales database, using Python ODBC interface to insert and delete sales records, and lastly, query the data in the Access database. Below are the main steps we will be programming step-by-step through:
   # Introduce and install Python & an ODBC module pypyodbc;
@@ -168,4 +167,6 @@ At this time, we will find a compressed salesdb_backup.mdb file generated under 
 ===Save as a Python program file and Summary===
 In the tutorial, we used the Python interactive interface, manipulated Python to executed of all steps with codes line-by-line. We can put all those codes into one text file suffixed by "py", so that Python will be performed in accordance with the order of the code in the text file. The program codes in this tutorial is available for download on sales_sample.py.
 
-Some readers may ask, in this tutorial, we programed with the Access database, how about other databases, how to program against them? In fact, as long as the database supports ODBC (I seldomly heard of a relational database that does not support ODBC), it should be used with pypyodbc. pypyodbc currently known to supported: Access, SQLServer, MySQL, PostgreSQL and even Excel. (It would be excellent if I can see some success story from you in comment area below!)
+Some readers may ask, in this tutorial, we programed with the Access database, how about other databases, how to program against them? In fact, as long as the database supports ODBC (I seldomly heard of a relational database that does not support ODBC), it should be used with pypyodbc. pypyodbc currently known to supported: Access, SQLServer, MySQL, PostgreSQL and even Excel. 
+
+*(It would be excellent if I can see some success story from you in comment area below!)*
