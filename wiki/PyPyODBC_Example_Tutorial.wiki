@@ -1,0 +1,8 @@
+#Python Database Programming Quick Start Tutorial.
+
+Today, I would use a simple sales database programing case to guide the interested readers the entry-level Python database programming techniques. We will use Python to create a simple MS-Access sales database, using Python ODBC interface to insert and delete sales records, and lastly, query the data in the Access database. Below are the main steps we will be programming step-by-step through:
+  # Introduce and install Python & an ODBC module pypyodbc;
+  # Create an Access database and a sales table in this database;
+  # Record sales transactions by inserting records in the table;
+  # Use Python to query data in the database and compress the MS-Access database file.
+Ready? Let's begin!
