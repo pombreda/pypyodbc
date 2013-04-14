@@ -54,8 +54,27 @@ At this time, you can see a blank Access database file salesdb.mdb is generated 
 
 http://s6.sinaimg.cn/bmiddle/6c64ac15gd41b42b04685&690?b=x.png
 
+The third step: using pypyodbc module, we obtain an ODBC connection object "conn" to the salesdb.mdb through an Access ODBC connection string:
+{{{
+>>> conn = pypyodbc.connect('Driver = {Microsoft Access Driver (*. Mdb)}; DBQ = D:\\salesdb.mdb')
+}}}
+And from this connection object, get an operational cursor of the connected database:
+{{{
+>>>cur = conn.cursor()
+}}}
 
 
+The fourth step: Create a new sales record table "saleout" in the database
+We use the cursor to pass a SQL command to the Access database, create a table named saleout:
+{{{
+>>>cur.execute('''CREATE TABLE saleout (
+ID COUNTER PRIMARY KEY,
+customer_name VARCHAR(25), 
+product_name VARCHAR(30), 
+price float, 
+volume int,
+sell_time datetime);''')
+}}}
 
 
 
