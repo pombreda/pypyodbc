@@ -1,6 +1,6 @@
 #summary A HelloWorld sample to access SQLServer with python
 
-= A !HelloWorld sample to access SQLServer with python <g:plusone size="tall"></g:plusone>=
+= A !HelloWorld sample to access SQLServer with python =
 
 {{{
 
@@ -103,3 +103,5 @@ conn.close()
 *[https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file PyPyODBC's Access mdb control "short cuts"]*
 
 *[https://code.google.com/p/pypyodbc/wiki/Compatibility_with_pyodbc pypyodbc and pyodbc]*
+
+<g:plusone size="tall"></g:plusone>
