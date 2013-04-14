@@ -17,4 +17,4 @@ _- Some people may ask, why not choose the latest Python 3.X ? Today (January 20
 Next, we need to install the pypyodbc module. Pypyodbc is a one-script pure python moudle to call the operating system's ODBC funcitons. Way to install pypyodbc:
 From http://code.google.com/p/pypyodbc/downloads/list download the pypyodbc installation file, currently the latest one is pypyodbc-0.9.1-SVN-r206.zip. 
 
-http://s7.sinaimg.cn/mw690/6c64ac15gd41b14d7fa77&690
+http://s7.sinaimg.cn/mw690/6c64ac15gd41b14d7fa77&690?b=x.png
