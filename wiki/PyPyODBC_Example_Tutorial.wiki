@@ -172,3 +172,5 @@ In the tutorial, we used the Python interactive interface, manipulated Python to
 Some readers may ask, in this tutorial, we programed with the Access database, how about other databases, how to program against them? In fact, as long as the database supports ODBC (I seldomly heard of a relational database that does not support ODBC), it should be used with pypyodbc. pypyodbc currently known to supported: Access, SQLServer, MySQL, PostgreSQL and even Excel. 
 
 *(It would be excellent if I can see some success story from you in comment area below!)*
+
+<g:plusone size="tall"></g:plusone>
