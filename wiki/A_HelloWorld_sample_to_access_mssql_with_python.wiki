@@ -97,7 +97,7 @@ conn.close()
 
 ==See also:==
 
-*[https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file Python Database Programming Quick Start Tutorial (EN Version)]*
+*[https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file PyPyODBC's Access mdb control "short cuts"]*
 
 *[https://code.google.com/p/pypyodbc/wiki/PyPyODBC_Example_Tutorial PyPyODBC tutorial by a sales DB example]*
 
