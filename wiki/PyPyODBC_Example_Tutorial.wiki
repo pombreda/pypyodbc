@@ -99,13 +99,13 @@ Do not forget to submit the operations, so the record officially take effect in 
 Next, we then record a batch of sales:
 {{{
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',(u'Yang Tianzhen','Apple IPhone 5','6000.1',1,'2012-1-21'))
+VALUES(?,?,?,?,?)''',(u'Yang Tianzhen','Apple IPhone 5',6000.1,1,'2012-1-21'))
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',(u'Zheng Xianshi','Huawei Ascend D2','5100.5',1,'2012-1-22'))
+VALUES(?,?,?,?,?)''',(u'Zheng Xianshi','Huawei Ascend D2',5100.5,1,'2012-1-22'))
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',(u'Mo Xiaomin','Huawei Ascend D2','5200.5',1,'2012-1-22'))
+VALUES(?,?,?,?,?)''',(u'Mo Xiaomin','Huawei Ascend D2',5200.5,1,'2012-1-22'))
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',(u'Gu Xiaobai','Huawei Ascend mate','5000.5',1,'2012-1-22'))
+VALUES(?,?,?,?,?)''',(u'Gu Xiaobai','Huawei Ascend mate',5000.5,1,'2012-1-22'))
 }}}
 Immediately submit the changes, so these 4 records officially come into effect at the same time in the database:
 {{{
