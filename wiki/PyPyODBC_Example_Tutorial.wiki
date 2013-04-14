@@ -92,7 +92,7 @@ After the database and table have been created, we can fill in some sales record
 The first step, we record a customer of Mr. Jiang (Jiang Wen), on January 21, 2013, bought two Huawei Ascend mate phone with 5000.5 yuan:
 {{{
 >>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',(u'Jiang Wen','Huawei Ascend mate','5000.5',2,'2012-1-21'))
+VALUES(?,?,?,?,?)''',(u'Jiang Wen','Huawei Ascend mate',5000.5,2,'2012-1-21'))
 }}}
 Do not forget to submit the operations, so the record officially take effect in the database:
 {{{
