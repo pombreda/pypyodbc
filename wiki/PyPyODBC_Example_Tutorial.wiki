@@ -52,10 +52,7 @@ Step two: We want to create an Access database to store sales data. This is a fe
 }}}
 At this time, you can see a blank Access database file salesdb.mdb is generated in the D drive.
 
-
-
-
-
+http://s6.sinaimg.cn/bmiddle/6c64ac15gd41b42b04685&690?b=x.png
 
 
 
