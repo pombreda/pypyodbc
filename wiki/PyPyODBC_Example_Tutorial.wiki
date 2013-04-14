@@ -156,6 +156,10 @@ Then use pypyodbc win_compact_mdb function to compress the database file:
 http://s12.sinaimg.cn/mw690/6c64ac15gd41b416da1bb&690?b=.png
 
 
+At this time, we will find a compressed salesdb_backup.mdb file generated under the D drive, how ever, there is no big difference between the sizes of the two files in this case, but after long and frequent use of the database, the compression effect of the cleanup will be huge.
 
+===Save as a Python program file and Summary===
+In the tutorial, we used the Python interactive interface, manipulated Python to executed of all steps with codes line-by-line. We can put all those codes into one text file suffixed by "py", so that Python will be performed in accordance with the order of the code in the text file. The program codes in this tutorial is available for download on sales_sample.py.
 
+Some readers may ask, in this tutorial, we programed with the Access database, how about other databases, how to program against them? In fact, as long as the database supports ODBC (I seldomly heard of a relational database that does not support ODBC), it should be used with pypyodbc. pypyodbc currently known to supported: Access, SQLServer, MySQL, PostgreSQL and even Excel.
 
