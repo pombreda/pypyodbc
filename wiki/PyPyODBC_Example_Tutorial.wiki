@@ -114,6 +114,29 @@ Immediately submit the changes, so these 4 records officially come into effect a
 >>>cur.commit()
 }}}
 At this point, we have 5 sales transactions recorded in the system. In the following steps, we will query these records.
+_
+*Q: Can I just use below method to insert data by generating plain SQL? Why do you use question marks and parameters?*
+{{{
+>>>cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(u'Jiang Wen','Huawei Ascend mate',5000.5,2,'2012-1-21')''')
+}}}
+
+*A:*
+Dynamically generate data value embeded plain SQL not only has performance disadvantage, but also has security dangrous. If some one provide 
+{{{Huawei Ascend mate',5000.5,2,'2012-1-21'); INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(u'!!!!SQL Injection Hacked!!!!!','!!!!Data Injected!!!!!)}}}
+as the value of field *product_name*, and your program doesn't detect it, the generated SQL would be:
+{{{
+cur.execute('''INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(u'Jiang Wen','Huawei Ascend mate',5000.5,2,'2012-1-21')INSERT INTO saleout(customer_name,product_name,price,volume,sell_time) 
+VALUES(u'!!!!SQL Injection Hacked!!!!!','!!!!Data Injected!!!!!',5000.5,2,'2012-1-21')''')
+}}}
+
+*While using parameters prevents that!*
+
+
+
+_
 
 
 ===4) Use Python to query data in the database and compress the MS-Access database file.===
