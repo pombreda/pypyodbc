@@ -96,10 +96,9 @@ conn.close()
 }}}
 
 ==See also:==
-*[https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file pypyodbc's Access MDB file support features on Win32 platform]*
+
+*[https://code.google.com/p/pypyodbc/wiki/pypyodbc_for_access_mdb_file Python Database Programming Quick Start Tutorial (EN Version)]*
 
 *[https://code.google.com/p/pypyodbc/wiki/PyPyODBC_Example_Tutorial PyPyODBC tutorial by a sales DB example]*
 
 *[https://code.google.com/p/pypyodbc/wiki/Compatibility_with_pyodbc pypyodbc and pyodbc]*
-
-*[http://blog.sina.com.cn/s/blog_6c64ac1501019ns8.html Python Database Programming Quick Start Tutorial (EN Version)]*
