@@ -174,3 +174,6 @@ Some readers may ask, in this tutorial, we programed with the Access database, h
 *(It would be excellent if I can see some success story from you in comment area below!)*
 
 <g:plusone size="tall"></g:plusone>
+
+See Also:
+[https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python A HelloWorld demo script to access SQLServer]
