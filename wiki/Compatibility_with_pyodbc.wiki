@@ -53,6 +53,7 @@ for row in cursor:
 
 = Speed difference with pyodbc =
   Download [https://github.com/jiangwen365/pypyodbc/blob/master/odbc_bench.py odbc_bench.py] from Github, and you can run benchmarks under pyodbc and pypyodbc
+
   To get the benchmark with pyodbc, run:
 {{{
 python odbc_bench.py pyodbc
