@@ -27,7 +27,6 @@ pypyodbc.win_compact_mdb('D:\\database.mdb','D:\\compacted.mdb')
 
 = How to =
 
-Import pypyodbc in you scrpt and:
   * To create an Access mdb file
 
 {{{
@@ -35,32 +34,27 @@ import pypyodbc
 pypyodbc.win_create_mdb( "D:\\Your_MDB_file_path.mdb" )
 }}}
 
-  * As an Python ODBC DBI 2.0 module, you can continue to use pypyodbc to connect to the created mdb files and manipulate them with ODBC interface. 
+  * To connect to the created mdb files, and manipulate them with the ODBC interface. 
 
-Below is a demo snippet:
 
 {{{
 
-conn = pypyodbc.win_connect_mdb("D:\\Your_MDB_file_path.mdb")  # new in version 1.0.11
-
-
-# Below is common ODBC connection string style to connect to mdb file
-#conn = pypyodbc.connect('Driver={Microsoft Access Driver (*.mdb)};DBQ='+mdb_path, unicode_results = True)  
-
+conn = pypyodbc.win_connect_mdb("D:\\Your_MDB_file_path.mdb")  
 
 cur = conn.cursor()
-cur.execute(u"""create table pypyodbc_test_tabl (ID integer PRIMARY KEY,product_name text)""")
+cur.execute(u"""CREATE TABLE pypyodbc_test_tabl (ID INTEGER PRIMARY KEY,product_name TEXT)""")
 
-...
+cur.execute(u"""INSERT INTO pypyodbc_test_tabl VALUES (1,'PyPyODBC')""")
+
 cur.close()
 conn.commit()
 conn.close()
    
 
 }}}
-*You can refer to [https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python Connect to SQLserver sample] to know more about DBI programming with pypyodbc.*
 
-  * Finally, To compact an existing Access mdb file
+
+  * To compact an existing Access mdb file
 
 {{{
 pypyodbc.win_compact_mdb("D:\\The path to the original to be compacted mdb file"
@@ -68,4 +62,4 @@ pypyodbc.win_compact_mdb("D:\\The path to the original to be compacted mdb file"
 }}}
 
 ==See also==
-===[https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python PyPyODBC: Hello SQLServer]===
+===[https://code.google.com/p/pypyodbc/wiki/A_HelloWorld_sample_to_access_mssql_with_python PyPyODBC: Hello SQL Server]===
