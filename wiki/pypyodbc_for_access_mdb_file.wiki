@@ -17,7 +17,6 @@ connection = pypyodbc.win_connect_mdb('D:\\database.mdb')
 
 connection.cursor().execute('CREATE TABLE t1 (id COUNTER PRIMARY KEY, name CHAR(25));').commit()
 
-cur.execute(u"""INSERT INTO pypyodbc_test_tabl VALUES (1,'PyPyODBC')""")
 
 connection.close()
 
