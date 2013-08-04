@@ -6,6 +6,25 @@
 You can use pypyodbc to easily create an empty Access MDB file on win32 platform, and also compact existing Access MDB files.
 
 
+= Just that simple: =
+
+{{{
+import pypyodbc 
+             
+pypyodbc.win_create_mdb('D:\\database.mdb')
+
+connection = pypyodbc.win_connect_mdb('D:\\database.mdb')
+
+connection.cursor().execute('CREATE TABLE t1 (id COUNTER PRIMARY KEY, name VARCHAR(25));').commit()
+
+...
+
+pypyodbc.win_compact_mdb('D:\\database.mdb','D:\\compacted.mdb')
+
+
+}}}
+
+
 = How to =
 
 Import pypyodbc in you scrpt and:
