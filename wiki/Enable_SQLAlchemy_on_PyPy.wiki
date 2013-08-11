@@ -22,6 +22,7 @@ Then we simply extend SQLAlchemy so it can use the pypyodbc library installed in
   * *Step 2:* Create a copy of pypy-1.9\site-packages\sqlalchemy\*connectors*\pyodbc.py and rename it to pypyodbc.py, then text replace all "pyodbc" to "pypyodbc" in the new pypyodbc.py.
 
 
+
 * For SQL Server*
 ----
   * *Step 3:* Create a copy of pypy-1.9\site-packages\sqlalchemy\*dialects\mssql*\pyodbc.py and rename it to pypyodbc.py, and then text replace all "pyodbc" to "pypyodbc" in the new pypyodbc.py.
@@ -32,6 +33,7 @@ Then we simply extend SQLAlchemy so it can use the pypyodbc library installed in
 from sqlalchemy.dialects.mssql import base, pyodbc, adodbapi, \ 
                                        pymssql, zxjdbc, mxodbc, pypyodbc
 }}}
+
 
 
 * For MYSQL*
@@ -53,10 +55,17 @@ from . import base, mysqldb, oursql, \
 
 
 
-Now you can use SQLAlchemy with below code:
+  * *Step 5:Now you can use SQLAlchemy with below code:
 {{{
 import sqlalchemy
-engine = sqlalchemy.create_engine('mssql+pypyodbc://MSSQL_DSN')
+engine = sqlalchemy.create_engine('mssql+pypyodbc://MSSQL_ODBC_DSN')
+for row in engine.execute('select * from aTable'):
+    print (row)
+}}}
+or for mysql 
+{{{
+import sqlalchemy
+engine = sqlalchemy.create_engine('mysql+pypyodbc://MYSQL_ODBC_DSN')
 for row in engine.execute('select * from aTable'):
     print (row)
 }}}
