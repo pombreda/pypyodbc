@@ -2,7 +2,7 @@
 
 = Introduction =
 
-With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple benchmark script] on GitHub, below is the performance scores on Windows operation an Access MDB database
+With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple benchmark script] on GitHub, below is the performance scores on Windows operating Access MDB databases
 
 
 
