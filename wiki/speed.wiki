@@ -15,7 +15,7 @@ Running with pypyodbc 1.2.1
         Read  time: 1.60899996758
 
 
-===pyodbc on CPython 2.7.6===
+===[http://code.google.com/p/pyodbc pyodbc] on CPython 2.7.6===
 Running with pypyodbc 3.0.6
         Write time: 12.9730000496
         R & W time: 12.5540001392
