@@ -21,13 +21,13 @@ Running with pypyodbc 3.0.6
         R & W time: 12.5540001392
         Read  time: 0.18799996376
 
-===pypyodbc on PyPy 2.2===
+===pypyodbc on !PyPy 2.2===
 Running with pypyodbc 1.2.1
         Write time: 9.57299995422
         R & W time: 10.9049999714
         Read  time: 0.707999944687
 
-===pypyodbc on IronPython 2.7.4===
+===pypyodbc on !IronPython 2.7.4===
 Running with pypyodbc 1.2.1
         Write time: 10.2185821533
         R & W time: 15.8019104004
