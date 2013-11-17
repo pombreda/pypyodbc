@@ -8,14 +8,14 @@ With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple ben
 == The seconds used to operate 20,000 records:(lower is better) ==
 
 
-===pypyodbc on CPython===
+===pypyodbc on CPython 2.7.6===
 Running with pypyodbc 1.2.1
         Write time: 9.7380001545
         R & W time: 12.2130000591
         Read  time: 1.60899996758
 
 
-===pyodbc on CPython===
+===pyodbc on CPython 2.7.6===
 Running with pypyodbc 3.0.6
         Write time: 12.9730000496
         R & W time: 12.5540001392
