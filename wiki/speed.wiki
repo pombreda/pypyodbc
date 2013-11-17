@@ -6,6 +6,8 @@ With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple ben
 
 
 = Details (lower is better)=
+The time used to operate 20,000 records:
+
 
 *pypyodbc on CPython*
 Running with pypyodbc 1.2.1
