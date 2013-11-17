@@ -6,7 +6,7 @@ With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple ben
 
 
 
-= The seconds used to operate 20,000 records:(lower is better) =
+== The seconds used to operate 20,000 records:(lower is better) ==
 
 
 ===pypyodbc on CPython===
