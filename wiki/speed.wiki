@@ -28,7 +28,7 @@ Running with pypyodbc 1.2.1
         R & W time: 10.9049999714
         Read  time: 0.707999944687
 
-===pypyodbc on IronPython===
+===pypyodbc on IronPython 2.7.4===
 Running with pypyodbc 1.2.1
         Write time: 10.2185821533
         R & W time: 15.8019104004
