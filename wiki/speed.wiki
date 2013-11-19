@@ -21,7 +21,7 @@ Running with pyodbc 3.0.6
         R & W time: 12.5540001392
         Read  time: 0.18799996376
 
-===pypyodbc on !PyPy 2.2 (After JIT started)===
+===pypyodbc on !PyPy 2.2 (after JIT started)===
 Running with pypyodbc 1.2.1
         Write time: 9.57299995422
         R & W time: 10.9049999714
