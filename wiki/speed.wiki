@@ -1,11 +1,12 @@
 #summary pypyodbc speed
 
 
-With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple benchmark script] on GitHub, below is the performance scores on Windows operating Access MDB databases
+With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple benchmark script] on GitHub, below is the performance scores on Windows 
 
 
 
-== The seconds used to operate 20,000 records:(lower is better) ==
+=Access mdb database=
+== The seconds used to operate 20,000 records:==
 
 
 ===pypyodbc on CPython 2.7.6===
@@ -32,3 +33,22 @@ Running with pypyodbc 1.2.1
         Write time: 10.2185821533
         R & W time: 15.8019104004
         Read  time: 2.62014770508
+
+
+
+=SQLServer=
+== The seconds used to operate 20,000 records:==
+
+===pypyodbc on CPython 2.7.6===
+Running with pypyodbc 1.2.1
+sqlncli10.dll
+        Write time: 12.4639999866
+        R & W time: 15.6489999294
+        Read  time: 1.54399991035
+
+===[http://code.google.com/p/pyodbc pyodbc] on CPython 2.7.6===
+Running with pypyodbc 3.0.6
+sqlncli10.dll
+        Write time: 10.4210000038
+        R & W time: 10.6079998016
+        Read  time: 0.141000032425
