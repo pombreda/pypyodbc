@@ -6,7 +6,7 @@ With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple ben
 
 
 =Access mdb database=
-== The seconds used to operate 20,000 records:==
+The seconds used to operate 20,000 records:
 
 
 ===pypyodbc on CPython 2.7.6===
@@ -37,7 +37,7 @@ Running with pypyodbc 1.2.1
 
 
 =SQLServer=
-== The seconds used to operate 20,000 records:==
+The seconds used to operate 20,000 records:
 
 ===pypyodbc on CPython 2.7.6===
 Running with pypyodbc 1.2.1
