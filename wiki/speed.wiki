@@ -4,7 +4,7 @@
 With the [https://github.com/jiangwen365/pypyodbc/raw/master/speed.py simple benchmark script] on GitHub, below is the performance scores on Windows 
 
 
-
+----
 =Access mdb database=
 The seconds used to operate 20,000 records:
 
@@ -35,7 +35,7 @@ Running with pypyodbc 1.2.1
         Read  time: 2.62014770508
 
 
-
+----
 =SQLServer=
 The seconds used to operate 20,000 records:
 
