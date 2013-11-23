@@ -52,3 +52,10 @@ sqlncli10.dll
         Write time: 10.4210000038
         R & W time: 10.6079998016
         Read  time: 0.141000032425
+
+===pypyodbc on !PyPy 2.2 (after JIT started)===
+Running with pypyodbc 1.2.1
+sqlncli10.dll
+        Write time: 12.1679999828
+        R & W time: 14.9449999332
+        Read  time: 0.763999938965
