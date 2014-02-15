@@ -3,7 +3,9 @@
 = A !HelloWorld sample to access SQLServer with python =
 
 {{{
-
+# -*- coding: utf-8 -*-
+#                  We use the Python 2.x 3.x Compatible print function.
+from __future__ import print_function
 #                  Let Python load it's ODBC connecting tool pypyodbc
      
 import pypyodbc
