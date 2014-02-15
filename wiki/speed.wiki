@@ -47,6 +47,13 @@ Running with pypyodbc 1.2.1
 The seconds used to operate 20,000 records:
 
 ===pypyodbc on CPython 2.7.6===
+Running with pypyodbc 1.3.0
+sqlncli10.dll
+        Write time: 13.2389998436
+        R & W time: 15.9130001068
+        Read  time: 0.920000076294
+
+===pypyodbc on CPython 2.7.6===
 Running with pypyodbc 1.2.1
 sqlncli10.dll
         Write time: 12.4639999866
