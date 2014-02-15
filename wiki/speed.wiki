@@ -35,6 +35,14 @@ Running with pypyodbc 1.2.1
         R & W time: 10.9049999714
         Read  time: 0.707999944687
 
+===pypyodbc on !PyPy 2.2 (after JIT started)===
+Running with pypyodbc 1.3.0
+odbcjt32.dll
+        Write time: 9.92700004578
+        R & W time: 11.4329998493
+        Read  time: 0.476999998093
+
+
 ===pypyodbc on !IronPython 2.7.4===
 Running with pypyodbc 1.2.1
         Write time: 10.2185821533
@@ -66,6 +74,13 @@ sqlncli10.dll
         Write time: 10.4210000038
         R & W time: 10.6079998016
         Read  time: 0.141000032425
+
+===pypyodbc on !PyPy 2.2 (after JIT started)===
+Running with pypyodbc 1.3.0
+sqlncli10.dll
+        Write time: 12.7769999504
+        R & W time: 15.1629998684
+        Read  time: 0.470999956131
 
 ===pypyodbc on !PyPy 2.2 (after JIT started)===
 Running with pypyodbc 1.2.1
