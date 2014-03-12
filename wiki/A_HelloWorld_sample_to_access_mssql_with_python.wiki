@@ -10,13 +10,16 @@
 #                  We use the Python 2.x & 3.x compatible print function.
 
 from __future__ import print_function
-import datetime
 
 
 #                  Let Python load it's ODBC connecting tool pypyodbc
      
 import pypyodbc
 
+
+#                  Let Python load it's datetime functions
+
+import datetime
 
 #                  Get a connection to MSSQL ODBC DSN via pypyodbc, and assign it to conn
 
@@ -46,11 +49,11 @@ cur.commit()
 
 #                  Insert a row to the sellout table
 
-cur.execute('''INSERT INTO sellout(customer_name,product_name,price,volume,sell_time) 
-VALUES(?,?,?,?,?)''',(u'江文','Huawei Ascend mate','5000.5',2,datetime.datetime.now()))
+cur.execute('''INSERT INTO sellout(customer_name, product_name, price, volume, sell_time) 
+VALUES(?,?,?,?,?)''',(u'江文', 'Huawei Ascend mate', '5000.5', 2, datetime.datetime.now()) )
 
 
-#                  Another change have been made. let that take effective, Now!
+#                  Another change has been made. let that take effective, Now!
 
 cur.commit()
 
