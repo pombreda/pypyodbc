@@ -29,19 +29,18 @@ Running with pyodbc 3.0.6
         R & W time: 12.5540001392
         Read  time: 0.18799996376
 
+===pypyodbc on !PyPy 2.3 (after JIT started)===
+Running with pypyodbc 1.3.2
+odbcjt32.dll
+        Write time: 7.72200012207
+        R & W time: 9.39100003242
+        Read  time: 0.483999967575
+
 ===pypyodbc on !PyPy 2.2 (after JIT started)===
 Running with pypyodbc 1.2.1
         Write time: 9.57299995422
         R & W time: 10.9049999714
         Read  time: 0.707999944687
-
-===pypyodbc on !PyPy 2.2 (after JIT started)===
-Running with pypyodbc 1.3.0
-odbcjt32.dll
-        Write time: 9.92700004578
-        R & W time: 11.4329998493
-        Read  time: 0.476999998093
-
 
 ===pypyodbc on !IronPython 2.7.4===
 Running with pypyodbc 1.2.1
