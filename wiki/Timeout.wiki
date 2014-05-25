@@ -5,7 +5,7 @@
 There are 3 types of time out in ODBC:
 Connection Timeout - which is basically the about the network layer timeout;
 Login Timeout - which is the time to wait when login to a database;
-Query Timeout - which is the time to wait when database executing a query.
+Query Timeout - which is the time the program should wait when the database is executing a query.
 
 == Setting Connection Time Out ==
 Before connecting, set the value of pypyodbc.connection_timeout:
