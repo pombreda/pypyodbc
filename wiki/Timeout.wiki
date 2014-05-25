@@ -1,4 +1,4 @@
-#setting timeouts in pypyodbc.
+#summary setting timeouts in pypyodbc.
 
 = Setting Time Out =
 
